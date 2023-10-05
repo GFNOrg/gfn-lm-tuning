@@ -2,6 +2,6 @@ name: "integer"
 num_test: 100
 num_hw: 10000
 num_train: 10
-test_path: "data/arithmetic_with_tool/1digit_35_op+-_test.json"
+test_path: "data/arithmetic_with_tool/1digit_34_op+-_test.json"
 train_path: "data/arithmetic_with_tool/1digit_34_op+-_train_50.json"
 hw_path: "data/arithmetic_with_tool/1digit_34_op+-_hw.json"

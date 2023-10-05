@@ -1,0 +1,12 @@
+torch
+transformers
+peft
+wandb
+rich
+hydra-core
+editdistance
+bitsandbytes
+tqdm
+numpy
+trl
+scipy

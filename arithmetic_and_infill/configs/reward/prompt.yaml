@@ -1,0 +1,13 @@
+impose_vocab_constraint: True
+reward_name: "FrozenModelWithPrompt"
+reward_config: 
+  temperature: 1
+  solution_beta: 1
+  len_beta: 0
+  # prompt: ""
+  # prompt: "The solution is"
+  vocab_alpha: -99
+  prompt_data:
+    path: "data/arithmetic/1digit_3_op+-_train.json"
+    num_points: 3
+    extra_text: ""

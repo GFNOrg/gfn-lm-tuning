@@ -1,0 +1,26 @@
+# @package _global_
+
+defaults:
+  - override /model: instruct_gptj
+  - override /reward: prompt
+  - override /dataset: arithmetic_varying
+
+use_tools: True
+
+reward:
+  reward_config:
+    prompt_data: 
+      path: "data/arithmetic/1digit_34_op+-_train_50.json"
+      num_points: 3
+limit_capability: 2
+
+min_len: 5
+batch_size: 16
+eval_temp: 0.1
+max_len: 18
+max_eval_len: 21
+
+reward_sched:
+  start: 1.1
+  end: 0.5
+  horizon: 150

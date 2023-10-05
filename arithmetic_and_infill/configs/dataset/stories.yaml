@@ -1,0 +1,5 @@
+name: "stories"
+path: "data/stories.csv"
+max_data: 100
+use_rationales: True
+sol_prefix: ". "

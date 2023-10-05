@@ -1,0 +1,22 @@
+# @package _global_
+
+defaults:
+  - override /model: gpt2
+  - override /reward: without_prompt
+  - override /dataset: stories
+
+dataset:
+  name: 'stories_in_prompt_2'
+  max_data: 10000
+  use_rationales: True
+reward:
+  impose_vocab_constraint: False
+batch_size: 64
+grad_acc: 16
+max_len: 25
+use_reward_sched: True
+min_len: 5
+reward_sched:
+  start: 1.1
+  end: 0.85
+  horizon: 100

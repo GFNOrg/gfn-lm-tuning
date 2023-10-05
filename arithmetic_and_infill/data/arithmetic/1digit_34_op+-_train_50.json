@@ -1,0 +1,302 @@
+[
+    {
+        "str_query": "Question: 6 - 0 - 4 - 8 = ? Answer:",
+        "num_sol": -6,
+        "str_rationale": "6 - 0 = 6, 6 - 4 = 2, 2 - 8 = -6",
+        "str_sol": ". The answer is -6."
+    },
+    {
+        "str_query": "Question: 9 + 4 - 8 = ? Answer:",
+        "num_sol": 5,
+        "str_rationale": "9 + 4 = 13, 13 - 8 = 5",
+        "str_sol": ". The answer is 5."
+    },
+    {
+        "str_query": "Question: 5 + 9 - 3 + 8 = ? Answer:",
+        "num_sol": 19,
+        "str_rationale": "5 + 9 = 14, 14 - 3 = 11, 11 + 8 = 19",
+        "str_sol": ". The answer is 19."
+    },
+    {
+        "str_query": "Question: 1 + 5 - 7 = ? Answer:",
+        "num_sol": -1,
+        "str_rationale": "1 + 5 = 6, 6 - 7 = -1",
+        "str_sol": ". The answer is -1."
+    },
+    {
+        "str_query": "Question: 5 - 9 - 3 - 8 = ? Answer:",
+        "num_sol": -15,
+        "str_rationale": "5 - 9 = -4, -4 - 3 = -7, -7 - 8 = -15",
+        "str_sol": ". The answer is -15."
+    },
+    {
+        "str_query": "Question: 8 - 0 + 1 = ? Answer:",
+        "num_sol": 9,
+        "str_rationale": "8 - 0 = 8, 8 + 1 = 9",
+        "str_sol": ". The answer is 9."
+    },
+    {
+        "str_query": "Question: 5 + 3 + 5 + 1 = ? Answer:",
+        "num_sol": 14,
+        "str_rationale": "5 + 3 = 8, 8 + 5 = 13, 13 + 1 = 14",
+        "str_sol": ". The answer is 14."
+    },
+    {
+        "str_query": "Question: 8 + 7 - 1 = ? Answer:",
+        "num_sol": 14,
+        "str_rationale": "8 + 7 = 15, 15 - 1 = 14",
+        "str_sol": ". The answer is 14."
+    },
+    {
+        "str_query": "Question: 1 + 4 - 8 + 4 = ? Answer:",
+        "num_sol": 1,
+        "str_rationale": "1 + 4 = 5, 5 - 8 = -3, -3 + 4 = 1",
+        "str_sol": ". The answer is 1."
+    },
+    {
+        "str_query": "Question: 7 - 1 + 9 - 6 = ? Answer:",
+        "num_sol": 9,
+        "str_rationale": "7 - 1 = 6, 6 + 9 = 15, 15 - 6 = 9",
+        "str_sol": ". The answer is 9."
+    },
+    {
+        "str_query": "Question: 3 - 2 - 0 = ? Answer:",
+        "num_sol": 1,
+        "str_rationale": "3 - 2 = 1, 1 - 0 = 1",
+        "str_sol": ". The answer is 1."
+    },
+    {
+        "str_query": "Question: 1 + 2 + 2 = ? Answer:",
+        "num_sol": 5,
+        "str_rationale": "1 + 2 = 3, 3 + 2 = 5",
+        "str_sol": ". The answer is 5."
+    },
+    {
+        "str_query": "Question: 8 + 4 - 8 - 3 = ? Answer:",
+        "num_sol": 1,
+        "str_rationale": "8 + 4 = 12, 12 - 8 = 4, 4 - 3 = 1",
+        "str_sol": ". The answer is 1."
+    },
+    {
+        "str_query": "Question: 7 + 5 - 1 - 5 = ? Answer:",
+        "num_sol": 6,
+        "str_rationale": "7 + 5 = 12, 12 - 1 = 11, 11 - 5 = 6",
+        "str_sol": ". The answer is 6."
+    },
+    {
+        "str_query": "Question: 3 + 0 + 4 = ? Answer:",
+        "num_sol": 7,
+        "str_rationale": "3 + 0 = 3, 3 + 4 = 7",
+        "str_sol": ". The answer is 7."
+    },
+    {
+        "str_query": "Question: 2 + 5 + 6 + 0 = ? Answer:",
+        "num_sol": 13,
+        "str_rationale": "2 + 5 = 7, 7 + 6 = 13, 13 + 0 = 13",
+        "str_sol": ". The answer is 13."
+    },
+    {
+        "str_query": "Question: 9 + 8 + 9 = ? Answer:",
+        "num_sol": 26,
+        "str_rationale": "9 + 8 = 17, 17 + 9 = 26",
+        "str_sol": ". The answer is 26."
+    },
+    {
+        "str_query": "Question: 3 + 9 - 9 = ? Answer:",
+        "num_sol": 3,
+        "str_rationale": "3 + 9 = 12, 12 - 9 = 3",
+        "str_sol": ". The answer is 3."
+    },
+    {
+        "str_query": "Question: 5 + 1 + 0 = ? Answer:",
+        "num_sol": 6,
+        "str_rationale": "5 + 1 = 6, 6 + 0 = 6",
+        "str_sol": ". The answer is 6."
+    },
+    {
+        "str_query": "Question: 1 + 7 + 3 = ? Answer:",
+        "num_sol": 11,
+        "str_rationale": "1 + 7 = 8, 8 + 3 = 11",
+        "str_sol": ". The answer is 11."
+    },
+    {
+        "str_query": "Question: 9 + 1 + 4 - 1 = ? Answer:",
+        "num_sol": 13,
+        "str_rationale": "9 + 1 = 10, 10 + 4 = 14, 14 - 1 = 13",
+        "str_sol": ". The answer is 13."
+    },
+    {
+        "str_query": "Question: 6 - 2 + 0 + 8 = ? Answer:",
+        "num_sol": 12,
+        "str_rationale": "6 - 2 = 4, 4 + 0 = 4, 4 + 8 = 12",
+        "str_sol": ". The answer is 12."
+    },
+    {
+        "str_query": "Question: 3 + 4 + 5 + 7 = ? Answer:",
+        "num_sol": 19,
+        "str_rationale": "3 + 4 = 7, 7 + 5 = 12, 12 + 7 = 19",
+        "str_sol": ". The answer is 19."
+    },
+    {
+        "str_query": "Question: 2 - 5 + 8 = ? Answer:",
+        "num_sol": 5,
+        "str_rationale": "2 - 5 = -3, -3 + 8 = 5",
+        "str_sol": ". The answer is 5."
+    },
+    {
+        "str_query": "Question: 2 - 0 - 7 - 6 = ? Answer:",
+        "num_sol": -11,
+        "str_rationale": "2 - 0 = 2, 2 - 7 = -5, -5 - 6 = -11",
+        "str_sol": ". The answer is -11."
+    },
+    {
+        "str_query": "Question: 2 + 8 - 0 + 7 = ? Answer:",
+        "num_sol": 17,
+        "str_rationale": "2 + 8 = 10, 10 - 0 = 10, 10 + 7 = 17",
+        "str_sol": ". The answer is 17."
+    },
+    {
+        "str_query": "Question: 2 - 3 - 7 + 5 = ? Answer:",
+        "num_sol": -3,
+        "str_rationale": "2 - 3 = -1, -1 - 7 = -8, -8 + 5 = -3",
+        "str_sol": ". The answer is -3."
+    },
+    {
+        "str_query": "Question: 6 + 6 - 1 + 0 = ? Answer:",
+        "num_sol": 11,
+        "str_rationale": "6 + 6 = 12, 12 - 1 = 11, 11 + 0 = 11",
+        "str_sol": ". The answer is 11."
+    },
+    {
+        "str_query": "Question: 3 - 7 + 6 = ? Answer:",
+        "num_sol": 2,
+        "str_rationale": "3 - 7 = -4, -4 + 6 = 2",
+        "str_sol": ". The answer is 2."
+    },
+    {
+        "str_query": "Question: 9 - 6 + 0 - 2 = ? Answer:",
+        "num_sol": 1,
+        "str_rationale": "9 - 6 = 3, 3 + 0 = 3, 3 - 2 = 1",
+        "str_sol": ". The answer is 1."
+    },
+    {
+        "str_query": "Question: 7 + 8 + 7 = ? Answer:",
+        "num_sol": 22,
+        "str_rationale": "7 + 8 = 15, 15 + 7 = 22",
+        "str_sol": ". The answer is 22."
+    },
+    {
+        "str_query": "Question: 5 - 4 + 7 + 0 = ? Answer:",
+        "num_sol": 8,
+        "str_rationale": "5 - 4 = 1, 1 + 7 = 8, 8 + 0 = 8",
+        "str_sol": ". The answer is 8."
+    },
+    {
+        "str_query": "Question: 0 - 6 + 6 = ? Answer:",
+        "num_sol": 0,
+        "str_rationale": "0 - 6 = -6, -6 + 6 = 0",
+        "str_sol": ". The answer is 0."
+    },
+    {
+        "str_query": "Question: 0 + 0 + 8 = ? Answer:",
+        "num_sol": 8,
+        "str_rationale": "0 + 0 = 0, 0 + 8 = 8",
+        "str_sol": ". The answer is 8."
+    },
+    {
+        "str_query": "Question: 9 - 3 + 4 = ? Answer:",
+        "num_sol": 10,
+        "str_rationale": "9 - 3 = 6, 6 + 4 = 10",
+        "str_sol": ". The answer is 10."
+    },
+    {
+        "str_query": "Question: 7 + 6 - 1 = ? Answer:",
+        "num_sol": 12,
+        "str_rationale": "7 + 6 = 13, 13 - 1 = 12",
+        "str_sol": ". The answer is 12."
+    },
+    {
+        "str_query": "Question: 1 - 4 + 2 + 8 = ? Answer:",
+        "num_sol": 7,
+        "str_rationale": "1 - 4 = -3, -3 + 2 = -1, -1 + 8 = 7",
+        "str_sol": ". The answer is 7."
+    },
+    {
+        "str_query": "Question: 0 - 0 - 0 - 3 = ? Answer:",
+        "num_sol": -3,
+        "str_rationale": "0 - 0 = 0, 0 - 0 = 0, 0 - 3 = -3",
+        "str_sol": ". The answer is -3."
+    },
+    {
+        "str_query": "Question: 9 - 7 - 7 = ? Answer:",
+        "num_sol": -5,
+        "str_rationale": "9 - 7 = 2, 2 - 7 = -5",
+        "str_sol": ". The answer is -5."
+    },
+    {
+        "str_query": "Question: 3 - 6 + 9 = ? Answer:",
+        "num_sol": 6,
+        "str_rationale": "3 - 6 = -3, -3 + 9 = 6",
+        "str_sol": ". The answer is 6."
+    },
+    {
+        "str_query": "Question: 2 - 4 - 5 = ? Answer:",
+        "num_sol": -7,
+        "str_rationale": "2 - 4 = -2, -2 - 5 = -7",
+        "str_sol": ". The answer is -7."
+    },
+    {
+        "str_query": "Question: 5 + 9 - 0 = ? Answer:",
+        "num_sol": 14,
+        "str_rationale": "5 + 9 = 14, 14 - 0 = 14",
+        "str_sol": ". The answer is 14."
+    },
+    {
+        "str_query": "Question: 2 - 9 - 4 = ? Answer:",
+        "num_sol": -11,
+        "str_rationale": "2 - 9 = -7, -7 - 4 = -11",
+        "str_sol": ". The answer is -11."
+    },
+    {
+        "str_query": "Question: 4 + 1 + 7 = ? Answer:",
+        "num_sol": 12,
+        "str_rationale": "4 + 1 = 5, 5 + 7 = 12",
+        "str_sol": ". The answer is 12."
+    },
+    {
+        "str_query": "Question: 2 - 8 - 1 - 4 = ? Answer:",
+        "num_sol": -11,
+        "str_rationale": "2 - 8 = -6, -6 - 1 = -7, -7 - 4 = -11",
+        "str_sol": ". The answer is -11."
+    },
+    {
+        "str_query": "Question: 1 - 1 - 8 - 7 = ? Answer:",
+        "num_sol": -15,
+        "str_rationale": "1 - 1 = 0, 0 - 8 = -8, -8 - 7 = -15",
+        "str_sol": ". The answer is -15."
+    },
+    {
+        "str_query": "Question: 7 - 1 + 7 = ? Answer:",
+        "num_sol": 13,
+        "str_rationale": "7 - 1 = 6, 6 + 7 = 13",
+        "str_sol": ". The answer is 13."
+    },
+    {
+        "str_query": "Question: 5 - 2 + 2 + 9 = ? Answer:",
+        "num_sol": 14,
+        "str_rationale": "5 - 2 = 3, 3 + 2 = 5, 5 + 9 = 14",
+        "str_sol": ". The answer is 14."
+    },
+    {
+        "str_query": "Question: 3 - 3 + 0 = ? Answer:",
+        "num_sol": 0,
+        "str_rationale": "3 - 3 = 0, 0 + 0 = 0",
+        "str_sol": ". The answer is 0."
+    },
+    {
+        "str_query": "Question: 6 - 8 - 8 = ? Answer:",
+        "num_sol": -10,
+        "str_rationale": "6 - 8 = -2, -2 - 8 = -10",
+        "str_sol": ". The answer is -10."
+    }
+]

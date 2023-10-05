@@ -1,0 +1,90 @@
+# Data generation from distributions
+
+distributions:
+  target_distributions: ['uniform discrete']
+  'uniform discrete':
+    parameters:
+      a: 0
+      b: 100
+    type: int
+  poisson:
+    parameters:
+      lam: 1
+    type: int
+  binomial:
+    parameters:
+      n: 10
+      p: 0.5
+    type: int
+  geometric:
+    parameters:
+      p: 0.5
+    type: int
+  gaussian:
+    parameters:
+      mean: 0
+      std_dev: 1
+    type: float
+  exponential:
+    parameters:
+      scale: 1
+    type: float
+  'uniform continuous':
+    parameters:
+      a: 0
+      b: 1
+    type: float
+
+prompts:
+  - "The following is a random integer drawn uniformly between 0 and 100: "
+  # - 'Randomly generate one single random {type_of_number} from a {distribution} distribution with parameters {parameters}, and then stop: '
+  # - 'Sample a single output from a {distribution} distribution with parameters {parameters}: '
+  # - 'Here is one single random {type_of_number} sampled from a {distribution} distribution with parameters {parameters}: '
+  # - 'The following is a random {type_of_number} drawn from a {distribution} distribution with parameters {parameters}: '
+
+
+file_name: 
+  train: 'data/rng/data_train.csv'
+
+hparams:
+  n_samples: 2048
+  bsz: 64
+  grad_acc: 8
+  lr: 0.0005
+  warmup_steps: 10
+  max_len: 5
+  min_len: 1
+  eval_interval: 100
+  log_interval: 10
+  model_to_use: "gpt-j"  # 'gpt2'
+  seed: 42
+  save_dir: "ckpts"
+  epochs: 1
+  GFN:
+    bsz: 8
+    subtb_lambda: 1.0
+  PPO:
+    learning_rate: 1.41e-5
+    steps: 512
+    batch_size: 8
+    ppo_epochs: 1
+    gradient_accumulation_steps: 8
+    early_stopping: False
+    target_kl: 0.1
+    init_kl_coef: 0.2
+    adap_kl_ctrl: True
+    mini_batch_size: 1
+    optimize_cuda_cache: True
+  SFT:
+    lr: 0.0005
+    epochs: 50
+
+lora:
+  r: 512
+  lora_alpha: 32
+  lora_dropout: 0.1
+  bias: 'none'
+
+adamw:
+  b1: 0.9
+  b2: 0.999

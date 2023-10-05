@@ -1,0 +1,13 @@
+use_4bit: ${use_4bit}
+test_only: ${test_only}
+load_checkpoint_path: ${load_checkpoint_path}
+name: 'nlpcloud/instruct-gpt-j-fp16'
+device: 'cuda'
+use_lora: True
+save_path: null
+lora_config:
+  r: 64
+  alpha: 16
+  target_modules: ["k_proj", "v_proj", "q_proj", "out_proj"]
+  dropout: 0.1
+  bias: "none"

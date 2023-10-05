@@ -1,0 +1,49 @@
+hydra:
+  job:
+    chdir: True
+  run:
+    dir: ./outputs/${now:%Y-%m-%d}/${now:%H-%M-%S}
+
+defaults:
+  - reward: prompt
+  - dataset: integer
+  - model: instruct_gptj
+
+test_only: False
+load_checkpoint_path: null
+seed: 0
+use_4bit: False
+subtb_lambda: 1.
+max_len: 15
+max_eval_len: 15
+min_len: 0
+operators: ['+','-']
+limit_capability: -1
+loss_type: 'modified_subtb' # 'tb' 'tb_no_z' 'hvi' 'hvi_bl' 'pg'
+
+wandb_mode: "disabled"
+use_replay_buffer: True
+batch_size: 16
+train_steps: 2000
+eval_bsz: 10
+grad_acc: 32
+lr: 0.0001
+lr_logZ: 1.
+pf_temp_high: 2
+pf_temp_low: 0.5
+logZ_init: 0.
+eval_interval: 10
+full_eval_interval: 50
+log_interval: 10
+eval_temp: 1.
+use_reward_sched: True
+use_tools: False
+
+reward_sched:
+  start: 1.0
+  end: 0.7
+  horizon: 200
+
+replay_buffer: 
+  size: 50
+  use_tools: ${use_tools}

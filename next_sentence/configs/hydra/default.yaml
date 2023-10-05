@@ -1,0 +1,5 @@
+run:
+  dir: ${save_dir}/outputs/${now:%Y-%m-%d}_${now:%H-%M-%S}
+sweep:
+  dir: ${save_dir}/outputs_multiruns/${now:%Y-%m-%d}_${now:%H-%M-%S}
+  subdir: ${hydra.job.num}

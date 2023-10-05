@@ -1,0 +1,15 @@
+defaults:
+  - _self_
+  - task: binary-seq
+  - device: mps
+  - hydra: default
+
+seed: 27
+save_dir: "next_sentence/runs/"
+
+logger:
+  _target_: pytorch_lightning.loggers.WandbLogger
+  name: ${now:%Y-%m-%d}_${now:%H-%M-%S}
+  project: "LM-GFN-next-sentence-${task.name}"
+  save_dir: ${save_dir}
+  offline: False

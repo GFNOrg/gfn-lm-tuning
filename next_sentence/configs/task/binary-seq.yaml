@@ -1,0 +1,59 @@
+name: "binary-seq"
+
+data:
+  path: "data/next_sentence/binary_seq/prompts.txt"
+  train_size: 0.93
+  limit_prompts: null
+
+model:
+  name: "binary-seq"
+  lora_config:
+    _target_: peft.LoraConfig
+    target_modules: ["c_attn", "c_proj", "c_fc"]
+    r: 64
+    lora_alpha: 16
+    lora_dropout: 0.1
+    bias: "none"
+    fan_in_fan_out: True
+
+training:
+  subtb_lambda: 1.0
+  pf_temp_high: 2.0
+  pf_temp_low: 0.5
+  pf_temp_prob: 0.666
+  use_buffer_prob: 0.25
+  n_samples: 32
+  lr: 0.0001
+  accumulate_grad_batches: 10
+  epochs: 5000
+  use_4bit: False
+
+eval:
+  n_probes: 4
+  diversity_metric: null
+
+reward:
+  temp_start: 1.0
+  temp_end: 0.4
+  temp_horizon: 20000
+  vocab_alpha: -50
+  sentence_validator: null
+  buffer_size: 50
+
+callbacks:
+  - _target_: pytorch_lightning.callbacks.ModelCheckpoint
+    monitor: "val/logP(s) (avg)"
+    mode: "max"
+    save_last: True
+    dirpath: ${save_dir}/checkpoints/${now:%Y-%m-%d}_${now:%H-%M-%S}
+    filename: "epoch={epoch:03d}"
+    auto_insert_metric_name: True
+  - _target_: pytorch_lightning.callbacks.EarlyStopping
+    monitor: "val/logP(s) (avg)"
+    mode: "max"
+    patience: 1000
+
+constraints:
+  min_sentence_len: 1
+  max_sentence_len: 10
+  illegal_tokens: ["*", "-", "|"]

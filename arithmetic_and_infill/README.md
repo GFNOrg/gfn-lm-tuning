@@ -1,4 +1,4 @@
-# GFlowNet fine-tuning for Story Infilling and Integer Arithmetic 
+# GFlowNet fine-tuning for story infilling and integer arithmetic 
 
 To install the dependencies required to run the code in this directory use `pip install -r requirements.txt`
 

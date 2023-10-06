@@ -1,11 +1,11 @@
 defaults:
   - _self_
-  - task: binary-seq
-  - device: mps
+  - task: openwebtext_gpt2
+  - device: gpu
   - hydra: default
 
 seed: 27
-save_dir: "next_sentence/runs/"
+save_dir: "runs/"
 
 logger:
   _target_: pytorch_lightning.loggers.WandbLogger

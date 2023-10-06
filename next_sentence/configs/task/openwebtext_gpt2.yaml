@@ -1,7 +1,7 @@
 name: "openwebtext"
 
 data:
-  path: "data/next_sentence/openwebtext/prompts.txt"
+  path: "data/openwebtext/prompts.txt"
   train_size: 0.95
   limit_prompts: 1000
 

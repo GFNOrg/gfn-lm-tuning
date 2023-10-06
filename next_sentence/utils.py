@@ -8,8 +8,16 @@ import numpy as np
 from transformers import AutoTokenizer, AutoModelForSequenceClassification
 from sentence_transformers import SentenceTransformer
 from sentence_transformers.util import cos_sim
-from rewards import Reward
-from utils import base_to_lora, lora_to_base
+
+
+def lora_to_base(model):
+    model.base_model.disable_adapter_layers()
+    model.eval()
+
+
+def base_to_lora(model):
+    model.base_model.enable_adapter_layers()
+    model.train()
 
 
 @torch.no_grad()

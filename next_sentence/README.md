@@ -1,4 +1,4 @@
-# Experiment - Next sentence continuation
+# GFlowNet fine-tuning for next sentence continuation
 
 This file gives instructions for how to setup and run the experiment on next sentence continuation. We will go over:
 

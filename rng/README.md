@@ -1,4 +1,4 @@
-# Random Number Generation
+# GFlowNet fine-tuning for random number generation
 
 This folder contains the code necessary for replicating the experiments described in the section "Motivating example: Generating random numbers with LLMs" of our paper. These experiments demonstrate the effectiveness of different training methods in fine-tuning Large Language Models (LLMs) to generate random numbers from a specified distribution.
 
@@ -13,7 +13,7 @@ The experiments train variants of the same language model initialized from a pre
 - Likelihood-trained LM: Fine-tuned using Supervised Fine-Tuning (SFT)
 - RL-tuned LM: Fine-tuned using Proximal Policy Optimization (PPO)
 
-## Repository Structure
+## Repository structure
 
 ```
 rng/
@@ -46,7 +46,7 @@ To run the code in this repository, the following are required
 - PyTorch, Transformers and TRL for building and training the models
 - Additional libraries, which can be installed via pip, including `tqdm` for progress bars and `Unidecode` for text formatting utilities, among others.
 
-## Running the Experiments
+## Running the experiments
 
 1. Install the necessary Python packages.
 2. Adjust the parameters in the `configs/config.yaml` file as needed.

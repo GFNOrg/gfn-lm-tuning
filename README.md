@@ -23,8 +23,8 @@ BibTeX
 Visit the subdirectories to find code and documentation for each experiment in the paper:
 - Random number generation (§2): `rng`
 - Sentence continuation (§4.1): `next_sentence`
-- Story infilling (§4.2): `arithmetic_and_infill`
-- Subjectivity classification (§4.3): `subj`
-- Arithmetic with tool use (§4.4): `arithmetic_and_infill`
+- Story infilling (§4.2): `infill_subj_arithmetic`
+- Subjectivity classification (§4.3): `infill_subj_arithmetic`
+- Arithmetic with tool use (§4.4): `infill_subj_arithmetic`
 
 Please contact us or post an issue if you have any questions.

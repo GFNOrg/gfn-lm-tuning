@@ -4,7 +4,7 @@ import pandas as pd
 import numpy as np
 import torch
 from pytorch_lightning import LightningModule
-from next_sentence.utils import (
+from utils import (
     generate_and_return_termination_logprob,
     modified_subtb_loss,
     get_termination_vals,

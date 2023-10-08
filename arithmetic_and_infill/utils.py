@@ -56,7 +56,8 @@ def generate(model, encoded_prompt, eos_token_id, max_len=10, temperature=1., vo
     state = encoded_prompt.clone()
     if use_cache:
         past_key_values = model(state[:, :-1])['past_key_values']
-    EQUAL_TOKS = [tokenizer.encode(" =")[-1], tokenizer.encode("=")[-1]]
+    if use_tools:
+        EQUAL_TOKS = [tokenizer.encode(" =")[-1], tokenizer.encode("=")[-1]]
     for i in range(max_len):
         if use_tools and i > 0:
             if use_cache and past_key_values is not None:
@@ -134,7 +135,8 @@ def generate_and_return_eos_logprob(model, encoded_prompt, eos_token_id, reward_
     logrewards = encoded_prompt.new_zeros(encoded_prompt.size(0), max_len+1).float()
     if use_cache:
         past_key_values = model(state[:, :-1])['past_key_values']
-    EQUAL_TOKS = [tokenizer.encode(" =")[-1], tokenizer.encode("=")[-1]]
+    if use_tools:
+        EQUAL_TOKS = [tokenizer.encode(" =")[-1], tokenizer.encode("=")[-1]]
     if not skip_rewards:
         logrewards[:, 0] = reward_fn(state)
     for i in range(max_len):

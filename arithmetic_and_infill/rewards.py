@@ -43,18 +43,19 @@ class FrozenModelWithPrompt(Reward):
         # self.model.train()
         #return logPF[:, self.skip_first-1:].sum(dim=-1) * (1./self.temperature)
         lora_to_base(self.model)
-        res = score_fast(self.model,
-                          input_batch,
-                          self.eos_token_id,
-                          skip_first=skip_first,
-                          solution_len=solution_len,
-                          solution_beta=self.solution_beta,
-                          vocab_nice_mask=self.vocab_nice_mask,
-                          vocab_naughty_mask=self.vocab_naughty_mask,
-                          vocab_alpha=self.vocab_alpha,
-                          min_len=self.min_len,
-                          len_beta=self.len_beta, 
-                          prompt_cache=(self.prompt.cuda(), self.prompt_cache)) * (1./self.temperature)
+        with torch.no_grad():
+            res = score_fast(self.model,
+                            input_batch,
+                            self.eos_token_id,
+                            skip_first=skip_first,
+                            solution_len=solution_len,
+                            solution_beta=self.solution_beta,
+                            vocab_nice_mask=self.vocab_nice_mask,
+                            vocab_naughty_mask=self.vocab_naughty_mask,
+                            vocab_alpha=self.vocab_alpha,
+                            min_len=self.min_len,
+                            len_beta=self.len_beta, 
+                            prompt_cache=(self.prompt.cuda(), self.prompt_cache)) * (1./self.temperature)
         base_to_lora(self.model)
         return res
 
@@ -81,18 +82,19 @@ class FrozenModel(Reward):
         # self.model.train()
         #return logPF[:, self.skip_first-1:].sum(dim=-1) * (1./self.temperature)
         lora_to_base(self.model)
-        res = score_fast(self.model,
-                          input_batch,
-                          self.eos_token_id,
-                          skip_first=skip_first,
-                          solution_len=solution_len,
-                          solution_beta=self.solution_beta,
-                          cot_beta=self.cot_beta,
-                          vocab_nice_mask=self.vocab_nice_mask,
-                          vocab_naughty_mask=self.vocab_naughty_mask,
-                          vocab_alpha=self.vocab_alpha,
-                          min_len=self.min_len,
-                          len_beta=self.len_beta) * (1./self.temperature)
+        with torch.no_grad():
+            res = score_fast(self.model,
+                            input_batch,
+                            self.eos_token_id,
+                            skip_first=skip_first,
+                            solution_len=solution_len,
+                            solution_beta=self.solution_beta,
+                            cot_beta=self.cot_beta,
+                            vocab_nice_mask=self.vocab_nice_mask,
+                            vocab_naughty_mask=self.vocab_naughty_mask,
+                            vocab_alpha=self.vocab_alpha,
+                            min_len=self.min_len,
+                            len_beta=self.len_beta) * (1./self.temperature)
         base_to_lora(self.model)
         return res
 

@@ -59,7 +59,10 @@ class ReplayBuffer:
         add a batch of items to the buffer
         '''
         str_query = ' '.join([str(x) for x in query.tolist()])
-        str_answer = ' '.join([str(x) for x in answer.tolist()])
+        if answer is not None:
+            str_answer = ' '.join([str(x) for x in answer.tolist()])
+        else:
+            str_answer = 'None'
         str_query_answer = '|'.join([str_query, str_answer])
         if str_query_answer not in self._buffer:
             self._buffer[str_query_answer] = {'tensor_query': query,
@@ -83,7 +86,10 @@ class ReplayBuffer:
         and return a stacked tensor
         '''
         str_query = ' '.join([str(x) for x in query.tolist()])
-        str_answer = ' '.join([str(x) for x in answer.tolist()])
+        if answer is not None:
+            str_answer = ' '.join([str(x) for x in answer.tolist()])
+        else:
+            str_answer = 'None'
         str_query_answer = '|'.join([str_query, str_answer])
         if str_query_answer not in self._buffer:
             return None, None

@@ -4,7 +4,7 @@ This repository contains code for GFlowNet fine-tuning of language models, as de
 
 **Amortizing intractable inference in large language models**<br />
 Edward J. Hu*, Moksh Jain*, Eric Elmoznino, Younesse Kaddar, Guillaume Lajoie, Yoshua Bengio, Nikolay Malkin <br/>
-Paper: https://arxiv.org/abs/XXXX.XXXXX
+Paper: https://arxiv.org/abs/2310.04363
 <details>
 <summary>
 BibTeX
@@ -15,7 +15,7 @@ BibTeX
   title={Amortizing intractable inference in large language models},
   author={Hu, Edward J. and Jain, Moksh and Elmoznino, Eric and Kaddar, Younesse and Lajoie, Guillaume and Bengio, Yoshua and Malkin, Nikolay},
   year={2023},
-  journal={arXiv preprint XXXX.XXXXX}
+  journal={arXiv preprint 2310.04363}
 }
 ```
 </details>

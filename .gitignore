@@ -4,3 +4,5 @@ __pycache__
 .DS_Store
 next_sentence/runs/*
 !.gitkeep
+
+.vscode/*

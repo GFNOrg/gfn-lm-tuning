@@ -81,7 +81,7 @@ def get_dataloader_from_dataframe(df, tokenizer, bsz, shuffle=True, method="SFT"
         )
         return input_ids, target_ids
 
-    input_ids, output_ids = get_tensors_from_dataframe(df, tokenizer)
+    input_ids, output_ids = get_tensors_from_dataframe(df, tokenizer, method=method)
     if method == "SFT":
         dataset = list(zip(input_ids, output_ids))
         dataloader = DataLoader(

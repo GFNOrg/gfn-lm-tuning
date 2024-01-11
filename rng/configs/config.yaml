@@ -61,7 +61,7 @@ hparams:
   save_dir: "ckpts"
   epochs: 1
   GFN:
-    bsz: 8
+    bsz: 64
     subtb_lambda: 1.0
   PPO:
     learning_rate: 1.41e-5

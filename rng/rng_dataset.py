@@ -12,7 +12,7 @@ def split_dataframe(df, test_size=0.2, random_state=None):
     return train_df, test_df
 
 
-def get_tensors_from_dataframe(df, tokenizer, method="SFT"):
+def get_tensors_from_dataframe(df, tokenizer, method=None):
     prompts = df["Prompt"].tolist()
 
     if method == "SFT":
@@ -70,7 +70,7 @@ def get_tensors_from_dataframe(df, tokenizer, method="SFT"):
     return input_ids, output_ids
 
 
-def get_dataloader_from_dataframe(df, tokenizer, bsz, shuffle=True, method="SFT"):
+def get_dataloader_from_dataframe(df, tokenizer, bsz, shuffle=True, method=None):
     def collate_fn_SFT(batch):
         input_ids, target_ids = zip(*batch)
         input_ids = pad_sequence(

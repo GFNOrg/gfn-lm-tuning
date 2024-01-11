@@ -5,7 +5,7 @@ import random
 from omegaconf import DictConfig, OmegaConf, ListConfig
 import json
 from tqdm import tqdm
-from rng_utils import format_dict
+from rng.rng_utils import format_dict
 
 
 def generate_data_for_distribution(distribution, params, data_type, prompts):

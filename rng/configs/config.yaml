@@ -59,15 +59,15 @@ hparams:
   model_to_use: "gpt-j"  # 'gpt2'
   seed: 42
   save_dir: "ckpts"
-  epochs: 1
+  epochs: 10
   GFN:
-    bsz: 64
+    bsz: 8
     subtb_lambda: 1.0
   PPO:
     learning_rate: 1.41e-5
     steps: 512
     batch_size: 8
-    ppo_epochs: 1
+    ppo_epochs: 10
     gradient_accumulation_steps: 8
     early_stopping: False
     target_kl: 0.1

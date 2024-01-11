@@ -6,6 +6,7 @@ from omegaconf import DictConfig, OmegaConf, ListConfig
 import json
 from tqdm import tqdm
 from rng.rng_utils import format_dict
+import os
 
 
 def generate_data_for_distribution(distribution, params, data_type, prompts):
@@ -84,6 +85,11 @@ def main(cfg):
         all_data_train.extend(df_train)
 
     final_df_train = pd.concat(all_data_train, ignore_index=True)
+    
+    directory = os.path.dirname(cfg.file_name.train)
+    if not os.path.exists(directory):
+        os.makedirs(directory)
+
     final_df_train.to_csv(cfg.file_name.train, index=False)
     # visualize(final_df)
     # plt.savefig('images/data_visualization.png')

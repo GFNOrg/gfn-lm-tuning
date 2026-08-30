@@ -1,9 +1,9 @@
 # Amortizing intractable inference in large language models
 
-This repository contains code for GFlowNet fine-tuning of language models, as described in the paper
+This repository contains code for GFlowNet fine-tuning of language models, as described in the ICLR 2024 paper
 
 **Amortizing intractable inference in large language models**<br />
-Edward J. Hu*, Moksh Jain*, Eric Elmoznino, Younesse Kaddar, Guillaume Lajoie, Yoshua Bengio, Nikolay Malkin <br/>
+Edward J. Hu*, Moksh Jain*, Eric Elmoznino, Younesse Kaddar, Guillaume Lajoie, Yoshua Bengio, Esmeralda S. Whitammer<br/>
 Paper: https://arxiv.org/abs/2310.04363
 <details>
 <summary>
@@ -11,11 +11,11 @@ BibTeX
 </summary>
   
 ```bibtex
-@article{hu2023amortizing,
+@article{hu2024amortizing,
   title={Amortizing intractable inference in large language models},
-  author={Hu, Edward J. and Jain, Moksh and Elmoznino, Eric and Kaddar, Younesse and Lajoie, Guillaume and Bengio, Yoshua and Malkin, Nikolay},
-  year={2023},
-  journal={arXiv preprint 2310.04363}
+  author={Hu, Edward J. and Jain, Moksh and Elmoznino, Eric and Kaddar, Younesse and Lajoie, Guillaume and Bengio, Yoshua and Whitammer, Esmeralda S},
+  year={2024},
+  journal={International Conference on Learning Representations (ICLR)}
 }
 ```
 </details>
